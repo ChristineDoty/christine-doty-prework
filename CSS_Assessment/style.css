@@ -5,11 +5,8 @@ body {
     text-align: center;
 }
 
-.nav {
-    position: fixed;
+.navbar {
     background-color: gray;
-    height: 40px;
-    width: 100%;
 }
 
 .mainContent {
