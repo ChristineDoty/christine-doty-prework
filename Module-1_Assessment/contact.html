@@ -7,43 +7,44 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Christine Doty | Contact</title>
   </head>
-  <body>
+  <body class="d-flex flex-column h-100">
         
-
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand px-1 py-1 h1">Christine Doty</a>
-                <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div id="my-nav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="portfolio.html">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="mainContent">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container mx-auto px-0">
+            <a class="navbar-brand p-3 h1">Christine Doty</a>
+            <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="my-nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+      <div class="container mainContent">
                 <h4>Contact</h4>
                 <hr>
                 <form>
                     <div class="form-group">
                         <label for="Name">Name</label>
-                        <input type="text" class="form-control" id="Name">
+                        <input type="text" class="form-control" id="Name" placeholder="John Smith">
                     </div>
                     <div class="form-group">
                       <label for="Email">Email address</label>
-                      <input type="email" class="form-control" id="Email">
+                      <input type="email" class="form-control" id="Email" placeholder="example@gmail.com">
                     </div>
                     <div class="form-group">
                         <label for="Message">Message</label>
@@ -51,15 +52,13 @@
                       </div>
                     <button type="submit" class="btn">Submit</button>
                   </form>
-            </div>
+      </div>
+
+      <footer class="footer mt-auto text-center">
+        <div class="bottomLine">
         </div>
-        <footer class="footer mt-auto py-3 text-center">
-            <div class="container-fluid">
-                <div class="bottomLine">
-                </div>
-              <span class="text-muted">Copyright © 2020 Christine Doty</span>
-            </div>
-          </footer>
+      <span>Copyright © 2020 Christine Doty</span>
+      </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
