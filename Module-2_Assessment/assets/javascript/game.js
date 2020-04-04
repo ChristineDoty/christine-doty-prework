@@ -1,39 +1,49 @@
 // Make List of words
-    const gods = ['hermes' , 'apollo' , 'ares', 'aphrodite', 'zeus', 'hera', 'demeter', 'poseidon' , 'hades' , 'dionysus', 'persephone', 'hestia'];
+    const gods = ['hermes' , 'apollo', 'zeus', 'hera' , 'hades'];
     let currentWord = [];
     const guessedLetters = [];
     const placeholders = [];
 
-    //    for (let i = 0; i < gods.length; i++) {
-            // Choose a random word
-            currentWord = gods[Math.floor(Math.random() * gods.length)];
-            console.log (currentWord);
+   
+// Choose a random word
+currentWord = gods[Math.floor(Math.random() * gods.length)];
+console.log (currentWord);
+            
+let remainingGuesses = 15
+let guesses = document.querySelector('#guesses');
 
-            // Change number of underscores to match length of word
-            let blanks = document.querySelector('#blanks');
+guesses.innerHTML = remainingGuesses;
+
+ // Change number of underscores to match length of word
+let blanks = document.querySelector('#blanks');
         
-            for (let i = 0; i < currentWord.length; i++) {
-                placeholders.push ('_ ');
-                blanks.innerHTML += placeholders[i];
-                console.log (placeholders);
-            };
+    for (let i = 0; i < currentWord.length; i++) {
+            placeholders[i] = " _ "
+            blanks.textContent = placeholders;
+        }
+        // User presses key to start
+
 
 // Listen for key press
+    const letter = function (event) {
+    const key = event.key;
+    // Compare key press to letters in word
+    // If letter is in the word, reveal it
+        for (let i = 0 ; i < currentWord.length; i++) {
+            if (currentWord [i] === key) {
+                placeholders [i] = key;
+                console.log (placeholders);
+                blanks.innerHTML = placeholders.join(" ");
+            }
+        }
+    }    
 
-// Subtract 1 from remaining guess amount
+document.addEventListener('keyup', letter);
+
 
 // Add letter to letters guessed
 
-// Compare key press to letters in word
-
-// If letter is in the word, reveal it
-
-// If not, play buzzer
-
 // If user guesses word before tries run out, add 1 to score, If not, display "You lose"
 
-// User presses key to start
 
-
-   // Move to next word and start again
-
+   // Move to next word and start
