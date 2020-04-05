@@ -1,0 +1,13 @@
+body {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+} 
+
+.main {
+    background: url("../images/columns.png") center no-repeat;
+    width: 1280px;
+    height: 788px;
+    padding-top: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
+}

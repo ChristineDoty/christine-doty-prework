@@ -7,25 +7,39 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
 
     
     <title>Greek Gods Word Game</title>
   </head>
   <body>
-    <h1>Greek Gods Word Game</h1>
 
+    <h1>Greek Gods Word Game</h1>
     <p>Press any key to start</p>
 
-    <p>Wins: <span id="winsNumber">0</span></p>
-
-    <p id="blanks"></p>
-
-    <p>Guesses Remaining: <span id="guesses"></span></p>
-
-    <p>Letters Guessed:</p>
-    <p id="lettersGuessed"></p>
-
+    <div class="container-fluid main">
+      <div class="row mt-6">
+        <div class="col-6">
+        </div>
+        <div class="col-6">
+        </div>
+      <div class="col-6">
+        <p>Wins: <span id="winsNumber">0</span></p>
+        <p>Guesses Remaining: <span id="guesses"></span></p>
+      </div>
+      <div class="col-6">
+        <p id="blanks"></p>
+        <p>Letters Guessed:</p>
+        <p id="lettersGuessed"></p>
+      </div>
+      <div class="col-6">
+      </div>
+      <div class="col-6">
+      </div>
+     </div> 
+  </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
