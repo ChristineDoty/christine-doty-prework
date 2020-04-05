@@ -11,11 +11,9 @@ let lettersGuessed = document.querySelector('#lettersGuessed');
 let guesses = document.querySelector('#guesses');
 let winsNumber = document.querySelector('#winsNumber');
 
-//Press key to start
-// document.addEventListener("keyup", game());
-gameSetup();
+gameSetup ();
 
-function gameSetup (){
+function gameSetup() {
     //Choose a random word
     currentWord = gods[Math.floor(Math.random() * gods.length)];
     console.log (currentWord);
@@ -36,38 +34,40 @@ function gameSetup (){
 };
 
 //Main game stuff
+
 //Listen for key press
-this.addEventListener("keyup", function(event) {
+document.addEventListener("keypress", function(event) {
     //Check if the game is over and reset if it is
-        guessing(event.key);
+    if(gameOver) {
+        gameSetup();
+        gameOver = false;
+    } else if(placeholders.indexOf('_') == -1) {
+         wins++;
+        console.log (wins);
+        winsNumber.innerHTML = wins;
+        //Restart Game
+        gameOver = true;
+    } else {
+        guessing (event.key);
+    }
+
 });
 
 function guessing () {
-    if (remainingGuesses > 1 && placeholders.indexOf('_') != -1) {
-        if (guessedLetters.indexOf(event.key) == -1) {
+    if (remainingGuesses > 0) {
         guessedLetters.push(event.key);
-        lettersGuessed.innerHTML = guessedLetters.join(' ');
-        //remove 1 guess
+        lettersGuessed.innerHTML = guessedLetters.join(' '); 
+        //Remove 1 guess
         remainingGuesses--;
-        }
         guesses.innerHTML = remainingGuesses;    
             for (let k = 0 ; k < currentWord.length; k++) {
                 if (currentWord [k] === event.key) {
                 placeholders [k] = event.key;
                 console.log (placeholders);
                 blanks.innerHTML = placeholders.join(' ');
-                console.log(placeholders);
-            } 
-
+                } 
+            }
     }
-    } else if (placeholders.indexOf('_') == -1){
-            youWin();
-    } else {
-        gameSetup ();
-    }
-};
-function youWin () {
-    wins++;
-    winsNumber.innerHTML = wins;
-    gameSetup ();
 }
+
+
