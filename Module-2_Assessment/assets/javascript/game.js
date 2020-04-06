@@ -33,12 +33,13 @@ let startGame = function (){
 
 //Main game stuff
 startGame();
+
 //Listen for key press
 document.addEventListener("keyup", function(event) {
     //Check if the game is over and reset if it is
         key = event.key
         guessing(key);
-},false);
+});
 
 function guessing () {
     if (remainingGuesses > 1 && placeholders.indexOf('_') != -1) {
@@ -64,8 +65,9 @@ function guessing () {
         startGame();
     }
 };
+
 function youWin() {
     wins++;
     winsNumber.innerHTML = wins;
     startGame();
-}
+};
