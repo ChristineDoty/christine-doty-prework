@@ -1,6 +1,6 @@
 # Greek Gods Word Game
 
-A simple hangman-style word guessing game.
+A hangman-style word guessing game.
 
 ## How to play
 
